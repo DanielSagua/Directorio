@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Logo (opcional) -->
+        <div class="text-center mb-4">
+            <a href="/">
+                <img src="/img/logoWEG.jpg" alt="Logo de la empresa" class="img-fluid" style="max-width: 180px;">
+            </a>
+        </div>
+
+        <!-- Título -->
+        <h2 class="text-center mb-4">Panel de Administración</h2>
+
+        <!-- Menú de opciones -->
+<div class="card shadow mx-auto" style="max-width: 500px;">
+    <div class="card-body">
+        <div class="list-group mb-3">
+            <a href="/admin/busqueda" class="list-group-item list-group-item-action d-flex align-items-center">
+                <i class="bi bi-search me-2"></i> Búsqueda Avanzada
+            </a>
+
+            <a href="/" class="list-group-item list-group-item-action d-flex align-items-center">
+                <i class="bi bi-search-heart me-2"></i> Búsqueda Básica
+            </a>
+
+            <a href="/admin/gestionColab" class="list-group-item list-group-item-action d-flex align-items-center">
+                <i class="bi bi-people me-2"></i> Gestión de Colaboradores
+            </a>
+        </div>
+
+        <!-- Accordion para Gestión de Usuarios -->
+        <div class="accordion" id="accordionUsuarios">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingUsuarios">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUsuarios" aria-expanded="false" aria-controls="collapseUsuarios">
+                        <i class="bi bi-person-gear me-2"></i> Gestión de Usuarios
+                    </button>
+                </h2>
+                <div id="collapseUsuarios" class="accordion-collapse collapse" aria-labelledby="headingUsuarios" data-bs-parent="#accordionUsuarios">
+                    <div class="accordion-body p-0">
+                        <div class="list-group list-group-flush">
+                            <a href="/admin/register" class="list-group-item list-group-item-action d-flex align-items-center">
+                                <i class="bi bi-person-plus me-2"></i> Registrar Usuario
+                            </a>
+                            <a href="/admin/edit" class="list-group-item list-group-item-action d-flex align-items-center">
+                                <i class="bi bi-pencil-square me-2"></i> Editar Usuario
+                            </a>
+                            <a href="/admin/delete" class="list-group-item list-group-item-action d-flex align-items-center">
+                                <i class="bi bi-trash3 me-2"></i> Eliminar Usuario
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <!-- Botón cerrar sesión -->
+        <div class="text-center mt-4">
+            <a href="/logout" class="btn btn-outline-danger">
+                <i class="bi bi-box-arrow-right"></i> Cerrar Sesión
+            </a>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 || Todos los derechos reservados || DanielS
+    </footer>
+
+    <!-- Bootstrap JS (opcional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directorio - TI</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="text-center">
+            <a href="/">
+                <img src="/img/logoWEG.jpg" alt="Logo de la empresa" class="img-fluid mb-3" style="max-width: 200px;">
+            </a>
+        </div>
+        <h1 class="text-center">Información de contacto<br>TI</h1>
+        <div class="form-group my-4">
+            <input type="text" id="searchInput" class="form-control" placeholder="Buscar por nombre o usuario..." />
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Anexo</th>
+                    <th>Celular</th>
+                    <th>Equipo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="resultsTable">
+                <!-- Los resultados se insertarán aquí -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Botón flotante Volver -->
+    <button id="volverBtn" class="btn btn-secondary shadow" onclick="history.back()">
+        <i class="bi bi-arrow-left-circle"></i> Volver
+    </button>
+
+    <footer>
+        &copy; 2024 || Todos los derechos reservados || DanielS
+    </footer>
+
+    <script src="/js/scripts.js"></script>
+</body>
+
+</html>

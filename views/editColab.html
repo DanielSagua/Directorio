@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Colaborador</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Editar Colaborador</h2>
+
+        <!-- Mensajes de éxito o error -->
+        <div id="alertContainer"></div>
+        
+        <form action="/admin/editColab" method="POST">
+            <div class="mb-3">
+                <label class="form-label">ID Colaborador</label>
+                <input type="number" name="id_usuario" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">RUT</label>
+                <input type="text" name="rut" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Nombre</label>
+                <input type="text" name="nombre" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Contrato</label>
+                <input type="text" name="contrato" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Código Vethor</label>
+                <input type="text" name="cod_vethor" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Usuario</label>
+                <input type="text" name="usuario" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Correo</label>
+                <input type="email" name="correo" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Gerencia</label>
+                <input type="text" name="gerencia" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Área</label>
+                <input type="text" name="area" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Cargo</label>
+                <input type="text" name="cargo" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Jefe Directo</label>
+                <input type="text" name="jefe_directo" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Anexo</label>
+                <input type="text" name="anexo" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Celular</label>
+                <input type="text" name="celular" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Equipo</label>
+                <input type="text" name="equipo" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Estado</label>
+                <select name="estado" class="form-control">
+                    <option value="">-- Seleccionar --</option>
+                    <option value="1">Activo</option>
+                    <option value="0">Inactivo</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Actualizar</button>
+            <a href="/admin" class="btn btn-secondary">Volver</a>
+        </form>
+    </div>
+    <footer>
+        &copy; 2024 || Todos los derechos reservados || DanielS
+    </footer>
+
+    <script>
+        // Obtener los parámetros de la URL
+        const params = new URLSearchParams(window.location.search);
+        const successMsg = params.get('success_msg');
+        const errorMsg = params.get('error_msg');
+        
+        const alertContainer = document.getElementById('alertContainer');
+        
+        if (successMsg) {
+            alertContainer.innerHTML = `<div class="alert alert-success">${successMsg}</div>`;
+        }
+        
+        if (errorMsg) {
+            alertContainer.innerHTML = `<div class="alert alert-danger">${errorMsg}</div>`;
+        }
+    </script>
+
+</body>
+</html>

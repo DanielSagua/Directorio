@@ -1,0 +1,40 @@
+body {
+    background-color: #f8f9fa;
+    padding-bottom: 60px; /* Altura suficiente para no tapar el contenido */
+
+}
+
+h1 {
+    color: #343a40;
+}
+
+/* Estilo para el logo */
+img {
+    border-radius: 50%;
+    max-width: 160px; /* 20% más pequeño que antes */
+    max-height: 160px;
+    object-fit: cover;
+    cursor: pointer; /* Cursor de mano para indicar clickeable */
+}
+
+.corp {
+    background-color:#01589f !important;
+}
+
+#volverBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+footer {
+    background-color: #01589f;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
